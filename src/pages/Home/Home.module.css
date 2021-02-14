@@ -1,0 +1,8 @@
+.sec {
+  background-color: antiquewhite;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 4rem 10rem;
+}

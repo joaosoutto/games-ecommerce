@@ -43,7 +43,37 @@
   width: 500px;
 }
 
-
 .load {
   width: 150px;
+}
+
+@media (max-width: 40rem) {
+  .div {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .filters {
+    width: 100%;
+  }
+
+  .btns {
+    justify-content: space-between;
+  }
+
+  .btns button {
+    margin: 0;
+    width: 30%;
+  }
+
+  .btns p {
+    display: none;
+  }
+
+  .productsGrid {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin-top: 0;
+  }
 }

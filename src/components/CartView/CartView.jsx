@@ -7,11 +7,16 @@ import styles from './CartView.module.css';
 import TrashSVG from '../../assets/TrashSVG';
 
 const CartView = () => {
-  const { cart, removeProduct, saveCart } = useContext(AppContext);
-
-  const [total, setTotal] = useState(0);
-  const [subtotal, setSubtotal] = useState(0);
-  const [frete, setFrete] = useState(0);
+  const {
+    cart,
+    removeProduct,
+    saveCart,
+    total,
+    subtotal,
+    frete,
+    setTotal,
+    setSubtotal,
+  } = useContext(AppContext);
 
   useEffect(() => {
     getTotal('price');
@@ -19,8 +24,9 @@ const CartView = () => {
 
   const getTotal = (key) => {
     const totalSum = cart.reduce((a, b) => a + (b[key] || 0), 0);
-    setTotal(totalSum);
     setSubtotal(totalSum);
+
+    total > 249 ? setTotal(totalSum) : setTotal(totalSum + frete);
   };
 
   return (
@@ -31,9 +37,13 @@ const CartView = () => {
       >
         Ver Carrinho <CartSVG />
       </button>
-      <h3>Frete: {frete}</h3>
-      <h3>Subtotal: {subtotal.toLocaleString()}</h3>
-      <h3>Total: R$ {total.toLocaleString()}</h3>
+      {total < 250 ? (
+        <h3>Frete: R$ {frete.toLocaleString()}</h3>
+      ) : (
+        <h3 className={styles.free}>Frete Grátis!</h3>
+      )}
+      <h3>Subtotal: R$ {subtotal.toLocaleString()}</h3>
+      <h3 className={styles.total}>Total: R$ {total.toLocaleString()}</h3>
       <div className={styles.prods}>
         {cart.map((prod, index) => (
           <div className={styles.prod} key={index}>

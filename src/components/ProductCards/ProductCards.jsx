@@ -5,7 +5,7 @@ import { AppContext } from '../../context/AppContext';
 
 import styles from './ProductCards.module.css';
 
-const CompName = ({ product }) => {
+const ProductCards = ({ product }) => {
   const { addProduct } = useContext(AppContext);
 
   return (
@@ -24,7 +24,7 @@ const CompName = ({ product }) => {
   );
 };
 
-CompName.propTypes = {
+ProductCards.propTypes = {
   product: PropTypes.shape({
     image: PropTypes.any,
     name: PropTypes.string,
@@ -33,4 +33,4 @@ CompName.propTypes = {
   })
 }
 
-export default CompName;
+export default ProductCards;

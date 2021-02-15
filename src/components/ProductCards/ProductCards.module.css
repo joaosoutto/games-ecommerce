@@ -42,3 +42,9 @@
   cursor: pointer;
   background-color: rgb(45, 87, 3);
 }
+
+@media (max-width: 40rem) {
+  .card {
+    height: 370px;
+  }
+}

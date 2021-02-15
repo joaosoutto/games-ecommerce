@@ -5,3 +5,10 @@
   align-items: flex-start;
   padding: 4rem 10rem;
 }
+
+@media (max-width: 40rem) {
+  .sec {
+    padding: 1rem;
+    flex-direction: column;
+  }
+}

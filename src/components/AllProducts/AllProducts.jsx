@@ -23,7 +23,6 @@ const AllProducts = () => {
     setProducts(data);
     setTimeout(() => {
       setLoading(false);
-      console.log(products);
     }, 1000);
   }, []);
 

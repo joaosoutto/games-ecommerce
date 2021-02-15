@@ -45,3 +45,22 @@
   background-color: rgb(40, 51, 133);
   color: #fff;
 }
+
+@media (max-width: 40rem) {
+  .sec {
+    padding: 1rem;
+  }
+
+  .checkout {
+    text-align: center;
+  }
+
+  .checkout h1 {
+    font-size: 2rem;
+  }
+
+  .checkout button {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}

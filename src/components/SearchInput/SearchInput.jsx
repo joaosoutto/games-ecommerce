@@ -15,7 +15,7 @@ const SearchInput = ({ handleChange }) => {
 
 SearchInput.propTypes = {
   handleChange: PropTypes.func,
-  placeHolder: PropTypes.string
-}
+  placeHolder: PropTypes.string,
+};
 
 export default SearchInput;

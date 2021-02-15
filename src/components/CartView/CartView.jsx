@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AppContext } from '../../context/AppContext';
-import { useHistory } from 'react-router-dom';
 import CartSVG from '../../assets/CartSVG';
 
 import styles from './CartView.module.css';
@@ -48,7 +47,7 @@ const CartView = () => {
         {cart.map((prod, index) => (
           <div className={styles.prod} key={index}>
             <h3>{prod.name}</h3>
-            <button onClick={() => removeProduct(prod)}>
+            <button type="button" onClick={() => removeProduct(prod)}>
               <TrashSVG />
             </button>
           </div>

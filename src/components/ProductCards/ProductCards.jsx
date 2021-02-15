@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import React, { useContext } from 'react';
 import CartSVG from '../../assets/CartSVG';
 import { AppContext } from '../../context/AppContext';
@@ -11,6 +11,7 @@ const ProductCards = ({ product }) => {
   return (
     <div className={styles.card}>
       <img
+        role="image"
         alt="Product Cover"
         src={`${process.env.PUBLIC_URL}/assets/${product.image}`}
       />
@@ -26,11 +27,11 @@ const ProductCards = ({ product }) => {
 
 ProductCards.propTypes = {
   product: PropTypes.shape({
-    image: PropTypes.any,
+    image: PropTypes.string,
     name: PropTypes.string,
     price: PropTypes.number,
-    score: PropTypes.number
-  })
-}
+    score: PropTypes.number,
+  }),
+};
 
 export default ProductCards;

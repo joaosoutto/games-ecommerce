@@ -8,7 +8,6 @@ import ProductCards from '../ProductCards/ProductCards';
 import styles from './AllProducts.module.css';
 import SearchInput from '../SearchInput/SearchInput';
 
-import load from '../../assets/loading.gif';
 
 const AllProducts = () => {
   const history = useHistory();
@@ -16,14 +15,8 @@ const AllProducts = () => {
 
   const [filter, setFilter] = useState('');
 
-  const [loading, setLoading] = useState(false);
-
   useEffect(() => {
-    setLoading(true);
     setProducts(data);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
   }, []);
 
   const filteredProducts = products.filter((product) =>
@@ -53,14 +46,12 @@ const AllProducts = () => {
     setFilter(target.value);
   };
 
-  if (loading) return <img className={styles.load} alt="loading" src={load} />;
-
   return (
     <div className={styles.div}>
       <div className={styles.filters}>
         <SearchInput handleChange={handleChange} />
         <div className={styles.btns}>
-          <p>Ordernar por:</p>
+          <p>Ordenar por:</p>
           <button onClick={() => sortBy('name')}>Nome</button>
           <button onClick={() => sortBy('price')}>Preço</button>
           <button onClick={() => sortBy('score')}>Nota</button>

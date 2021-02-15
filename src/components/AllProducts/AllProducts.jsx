@@ -62,9 +62,9 @@ const AllProducts = () => {
         <SearchInput handleChange={handleChange} />
         <div className={styles.btns}>
           <p>Ordernar por:</p>
-          <button onClick={() => sortBy('name')}>Name</button>
-          <button onClick={() => sortBy('price')}>Price</button>
-          <button onClick={() => sortBy('score')}>Score</button>
+          <button onClick={() => sortBy('name')}>Nome</button>
+          <button onClick={() => sortBy('price')}>Preço</button>
+          <button onClick={() => sortBy('score')}>Nota</button>
         </div>
       </div>
       <div className={styles.productsGrid}>

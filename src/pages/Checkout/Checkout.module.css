@@ -1,0 +1,47 @@
+.sec {
+  padding: 3rem 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkout h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.checkout p {
+  margin: 0.5rem;
+  width: 100%;
+  font-size: 1.3rem;
+}
+
+.checkout button {
+  width: 50%;
+  height: 50px;
+  margin-top: 2rem;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.3rem;
+  margin-left: 2rem;
+  border-radius: 20px;
+  transition: all 0.2s;
+  border: 3px solid rgb(40, 51, 133);
+  color: rgb(40, 51, 133);
+  background-color: #fff;
+}
+
+.checkout button:hover {
+  cursor: pointer;
+  background-color: rgb(40, 51, 133);
+  color: #fff;
+}

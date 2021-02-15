@@ -1,7 +1,49 @@
+.div {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
 .productsGrid {
-    /* background-color: aqua; */
-    width: 60%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 2rem;
+}
+
+.btns {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 4rem;
+}
+
+.btns button {
+  background-color: rgb(40, 51, 133);
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  height: 30px;
+  margin-left: 2rem;
+  transition: all 0.2s;
+  width: 120px;
+}
+
+.btns button:hover {
+  background-color: #fff;
+  border: 3px solid rgb(40, 51, 133);
+  color: rgb(40, 51, 133);
+  cursor: pointer;
+}
+
+.noMatch {
+  color: rgb(255, 47, 0);
+  width: 500px;
+}
+
+
+.load {
+  width: 150px;
 }
